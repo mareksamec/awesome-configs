@@ -54,6 +54,7 @@ editor_cmd = terminal .. " -e " .. editor
 filemanager="nemo"
 vivaldi="vivaldi"
 firefox="firefox"
+evolution="evolution"
 spacer=" "
 
 -- Default modkey.
@@ -113,7 +114,9 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                     { "Debian", debian.menu.Debian_menu.Debian },
                                     { "open terminal", terminal },
 				    { "Files", filemanager},
-				    { "Vivaldi browser", vivaldi}
+				    { "Vivaldi browser", vivaldi},
+				    { "Firefox browser", firefox},
+				    { "Evolution mail", evolution}
                                   }
                         })
 
@@ -494,14 +497,19 @@ awful.rules.rules = {
           "Wpa_gui",
           "pinentry",
           "veromix",
-          "xtightvncviewer"},
+          "xtightvncviewer",
+	  "evolution",
+	  "Pidgin",
+  },
 
         name = {
           "Event Tester",  -- xev.
+	  "Compose Message", -- evolution new message window
         },
         role = {
           "AlarmWindow",  -- Thunderbird's calendar.
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
+	  "conversation", -- Pidgin conversation window
         }
       }, properties = { floating = true }},
 
